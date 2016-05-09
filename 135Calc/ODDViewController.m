@@ -38,7 +38,7 @@
      && ([self.oddnum2.text length] > 0 || self.oddnum2.text !=nil ==FALSE ))
         
     {
-    self.dispmain.text = @"Total odd numbers is ";
+    self.dispmain.text = @"Total odd numbers is: ";
     [self.oddnum1 resignFirstResponder];
     [self.oddnum2 resignFirstResponder];
     int val1 = [self.oddnum1.text intValue];
@@ -127,6 +127,11 @@
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 
 - (void)viewDidLoad
 {

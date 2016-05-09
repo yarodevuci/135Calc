@@ -27,7 +27,10 @@
     self.eoDisplay.text = @"";
     self.textDisp.text = @"";
     self.numsDisp.text = @"";
-    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (IBAction)calcButton:(UIButton *)sender {
@@ -39,7 +42,7 @@
     
     {
     
-    self.textDisp.text = @"Total E.O.O numbers is ";
+    self.textDisp.text = @"Total E.O.O numbers is: ";
     [self.eonum1 resignFirstResponder];
     [self.eonum2 resignFirstResponder];
     int val1 = [self.eonum1.text intValue];
