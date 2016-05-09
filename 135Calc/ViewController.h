@@ -1,15 +1,16 @@
 //
 //  ViewController.h
-//  135Calc
+//  myapp
 //
-//  Created by Yaro on 5/8/16.
-//  Copyright © 2016 Yaro. All rights reserved.
+//  Created by Yaroslav Dukal on 02.10.14.
+//  Copyright (c) 2014 Yaroslav Dukal. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIAlertViewDelegate>  //******needed for UI Alert********
 
+
+- (IBAction)showalert:(id)sender; //creates ibaction button
 
 @end
-

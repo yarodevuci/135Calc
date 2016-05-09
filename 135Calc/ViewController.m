@@ -1,27 +1,45 @@
 //
 //  ViewController.m
-//  135Calc
+//  myapp
 //
-//  Created by Yaro on 5/8/16.
-//  Copyright © 2016 Yaro. All rights reserved.
+//  Created by Yaroslav Dukal on 02.10.14.
+//  Copyright (c) 2014 Yaroslav Dukal. All rights reserved.
 //
 
 #import "ViewController.h"
 
-@interface ViewController ()
 
+@interface ViewController ()
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)killapp:(UIButton *)sender {
+    exit(0);
+}
+
+//Creates Ui Alert View with my name
+- (IBAction)showalert:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"About" message:@"Designed and coded by \nYaroslav Dukal "  delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+    [alert show];
+    
+    
+    
+}
 @end
